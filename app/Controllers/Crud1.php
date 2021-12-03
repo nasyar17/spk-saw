@@ -10,6 +10,8 @@ class Crud1 extends Controller
    {
       $this->crud1Model = new Crud1Model();
    }
+   public function test()
+   { }
 
    public function index()
    {
