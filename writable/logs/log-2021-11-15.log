@@ -1,0 +1,114 @@
+CRITICAL - 2021-11-15 00:03:48 --> Undefined property: App\Controllers\Variabel::$obatModel
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\USER-P...', 28, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(45): App\Controllers\Variabel->generateIDVariabel()
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->tambah('K01')
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#7 {main}
+CRITICAL - 2021-11-15 00:04:04 --> Undefined property: App\Controllers\Variabel::$obatModel
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\USER-P...', 33, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(45): App\Controllers\Variabel->generateIDVariabel()
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->tambah('K01')
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#7 {main}
+CRITICAL - 2021-11-15 00:04:22 --> Undefined variable: variabel
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\variabel\tambah.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\USER-P...', 14, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('variabel/tambah', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(48): view('variabel/tambah', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->tambah('K01')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-15 00:08:37 --> number is not a valid rule.
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Validation\Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('number')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('variabel_nilai', 'variabel_nilai', '10', Array, Array)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(55): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->save('K01')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-15 00:11:20 --> Undefined variable: old
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\variabel\tambah.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\USER-P...', 18, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('variabel/tambah', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(48): view('variabel/tambah', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->tambah('K01')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-15 00:14:28 --> unique is not a valid rule.
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Validation\Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('unique')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('variabel_id', 'variabel_id', 'V17', Array, Array)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(55): CodeIgniter\Controller->validate(Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->save('K01')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-15 00:23:06 --> Unknown column 'variabe_nama' in 'where clause'
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT 1\nFROM `...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\Validation\Rules.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\Validation\Validation.php(325): CodeIgniter\Validation\Rules->is_unique('Sangat Banyak', 'variabe_nama', Array, NULL)
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\Validation\Validation.php(189): CodeIgniter\Validation\Validation->processRules('variabel_nama', 'variabel_nama', 'Sangat Banyak', Array, Array)
+#7 C:\Users\USER-PC\Desktop\spk-saw\system\Controller.php(219): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(55): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->save('K01')
+#10 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#11 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#14 {main}
+CRITICAL - 2021-11-15 00:23:16 --> Too few arguments to function App\Controllers\Variabel::tambah(), 0 passed in C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php on line 918 and exactly 1 expected
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->tambah()
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#5 {main}
+CRITICAL - 2021-11-15 00:23:31 --> Too few arguments to function App\Controllers\Variabel::tambah(), 0 passed in C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php on line 918 and exactly 1 expected
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->tambah()
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#5 {main}
+CRITICAL - 2021-11-15 00:45:28 --> Call to undefined method App\Controllers\Variabel::getVariabelByKriteria()
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->save('K01')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#5 {main}
+CRITICAL - 2021-11-15 00:45:41 --> Call to undefined method App\Controllers\Variabel::getVariabelByKriteriaID()
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->save('K01')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#5 {main}
+CRITICAL - 2021-11-15 00:46:18 --> Call to undefined method App\Models\KriteriaModel::getVariabelByKriteriaID
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(53): CodeIgniter\Model->__call('getVariabelByKr...', Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->save('K01')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#6 {main}

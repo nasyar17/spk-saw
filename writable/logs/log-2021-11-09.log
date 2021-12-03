@@ -1,0 +1,105 @@
+CRITICAL - 2021-11-09 08:10:13 --> Table 'spk_saw.siswa' doesn't exist
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Database\MySQLi\Connection.php(331): mysqli->query('INSERT INTO `si...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `si...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `si...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseBuilder.php(2249): CodeIgniter\Database\BaseConnection->query('INSERT INTO `si...', Array, false)
+#4 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(144): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->simpanExcel()
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#7 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#10 {main}
+CRITICAL - 2021-11-09 08:35:52 --> Undefined property: App\Controllers\Crud1::$load
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\USER-P...', 153, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#6 {main}
+CRITICAL - 2021-11-09 08:39:31 --> File not found: /assets/excel/templateExcel.xlsx
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('/assets/excel/t...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('/assets/excel/t...', true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('/assets/excel/t...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\HTTP\Response->download('templateExcel.x...', NULL)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-09 08:40:49 --> Undefined variable: response
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\USER-P...', 154, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#6 {main}
+CRITICAL - 2021-11-09 08:40:57 --> File not found: /assets/excel/templateExcel.xlsx
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('/assets/excel/t...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('/assets/excel/t...', true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('/assets/excel/t...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\HTTP\Response->download('templateExcel.x...', NULL)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-09 08:42:09 --> File not found: C:\Users\USER-PC\Desktop\spk-saw\/assets/excel/templateExcel.xlsx
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('C:\\Users\\USER-P...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('C:\\Users\\USER-P...', true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('C:\\Users\\USER-P...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\HTTP\Response->download('templateExcel.x...', NULL)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-09 08:42:40 --> File not found: C:\Users\USER-PC\Desktop\spk-saw\assets\excel\templateExcel.xlsx
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('C:\\Users\\USER-P...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('C:\\Users\\USER-P...', true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('C:\\Users\\USER-P...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\HTTP\Response->download('templateExcel.x...', NULL)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-09 08:44:07 --> File not found: \public\assets\excel\templateExcel.xlsx
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('\\public\\assets\\...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('\\public\\assets\\...', true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('\\public\\assets\\...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\HTTP\Response->download('templateExcel.x...', NULL)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-09 08:46:44 --> File not found: http://localhost:8080\assets\excel\templateExcel.xlsx
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('http://localhos...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('http://localhos...', true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('http://localhos...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\HTTP\Response->download('templateExcel.x...', NULL)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-09 08:47:07 --> File not found: http://localhost:8080\public\assets\excel\templateExcel.xlsx
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Files\File.php(74): CodeIgniter\Files\Exceptions\FileNotFoundException::forFileNotFound('http://localhos...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\DownloadResponse.php(139): CodeIgniter\Files\File->__construct('http://localhos...', true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\HTTP\Response.php(1077): CodeIgniter\HTTP\DownloadResponse->setFilePath('http://localhos...')
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Crud1.php(154): CodeIgniter\HTTP\Response->download('templateExcel.x...', NULL)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Crud1->downloadTemplate()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud1))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}

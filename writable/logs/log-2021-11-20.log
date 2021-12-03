@@ -1,0 +1,11 @@
+CRITICAL - 2021-11-20 07:35:50 --> Trying to access array offset on value of type null
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\kriteria\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\USER-P...', 15, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('kriteria/edit', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Kriteria.php(31): view('kriteria/edit', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Kriteria->edit('favicon.ico')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kriteria))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}

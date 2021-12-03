@@ -1,0 +1,55 @@
+.app-btn-danger {
+   background: #d44949;
+   color: #fff;
+   border-color: #d44949
+}
+
+.app-btn-danger:hover {
+   color: #fff;
+   background: #a83737;
+   border-color: #a83737
+}
+
+.app-btn-warning {
+   background: #f7b018;
+   color: #000;
+   border-color: #f7b018
+}
+
+.app-btn-warning:hover {
+   color: #000;
+   background: #cf9518;
+   border-color: #cf9518
+}
+
+.app-login .auth-background-holder {
+   /* background: url("../images/background/login-bg.jpg"); */
+   background: url("../images/background/register-bg.jpg");
+   background-size: cover;
+}
+
+.app-signup .auth-background-holder {
+   background: url("../images/background/register-bg.jpg");
+   background-size: cover;
+}
+
+.bg-dark {
+   background-color: #000;
+   border-radius: .25rem
+}
+
+.app-card.border-left-decoration-red {
+   border-left: 3px solid #dc3545
+}
+
+.app-card.border-left-decoration-blue {
+   border-left: 3px solid #0d6efd
+}
+
+.app-card.border-left-decoration-purple {
+   border-left: 3px solid #6f42c1
+}
+
+.link-download {
+   font-weight: 500;
+}

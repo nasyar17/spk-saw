@@ -1,0 +1,84 @@
+CRITICAL - 2021-11-17 02:58:00 --> Unable to connect to the database.
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Model.php(506): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Login.php(24): CodeIgniter\Model->first()
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Login->auth()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-17 03:02:23 --> Trying to access array offset on value of type null
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\variabel\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\USER-P...', 15, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('variabel/edit', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Variabel.php(100): view('variabel/edit', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Variabel->edit('favicon.ico')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Variabel))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-17 03:04:03 --> Trying to access array offset on value of type null
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\kriteria\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\USER-P...', 15, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('kriteria/edit', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Kriteria.php(31): view('kriteria/edit', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Kriteria->edit('favicon.ico')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kriteria))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-17 03:08:45 --> Invalid file: kriteria/ubahBobot.php
+#0 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('kriteria/ubahBo...')
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('kriteria/ubahBo...', Array, true)
+#2 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Kriteria.php(68): view('kriteria/ubahBo...', Array)
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Kriteria->ubahBobot()
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kriteria))
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#8 {main}
+CRITICAL - 2021-11-17 03:09:06 --> Undefined variable: k
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\kriteria\ubahBobot.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\USER-P...', 10, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('kriteria/ubahBo...', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Kriteria.php(68): view('kriteria/ubahBo...', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Kriteria->ubahBobot()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kriteria))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-17 03:09:17 --> Undefined variable: k
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\kriteria\ubahBobot.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\USER-P...', 10, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('kriteria/ubahBo...', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Kriteria.php(68): view('kriteria/ubahBo...', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Kriteria->ubahBobot()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kriteria))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-17 03:13:48 --> Undefined index: kriteria_nama
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\kriteria\ubahBobot.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\USER-P...', 57, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('kriteria/ubahBo...', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Kriteria.php(68): view('kriteria/ubahBo...', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Kriteria->ubahBobot()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kriteria))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-17 04:13:06 --> Array to string conversion
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Kriteria.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\Users\\USER-P...', 77, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Kriteria->saveBobot()
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kriteria))
+#3 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#6 {main}

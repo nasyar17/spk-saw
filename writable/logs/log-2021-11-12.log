@@ -1,0 +1,55 @@
+CRITICAL - 2021-11-12 17:14:24 --> Undefined index: supplier_name
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\obat\tambah.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\Users\\USER-P...', 41, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('obat/tambah', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Obat.php(47): view('obat/tambah', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Obat->tambah()
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Obat))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-12 17:21:00 --> Undefined variable: supplier
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\obat\edit.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\USER-P...', 41, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('obat/edit', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Obat.php(98): view('obat/edit', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Obat->edit('OB003')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Obat))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-12 17:21:24 --> Trying to access array offset on value of type null
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\obat\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\USER-P...', 15, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('obat/edit', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Obat.php(99): view('obat/edit', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Obat->edit('favicon.ico')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Obat))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-12 17:21:40 --> Trying to access array offset on value of type null
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\obat\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\USER-P...', 15, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('obat/edit', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Obat.php(99): view('obat/edit', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Obat->edit('favicon.ico')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Obat))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
+CRITICAL - 2021-11-12 17:21:50 --> Trying to access array offset on value of type null
+#0 C:\Users\USER-PC\Desktop\spk-saw\app\Views\supplier\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\Users\\USER-P...', 15, Array)
+#1 C:\Users\USER-PC\Desktop\spk-saw\system\View\View.php(246): include('C:\\Users\\USER-P...')
+#2 C:\Users\USER-PC\Desktop\spk-saw\system\Common.php(1119): CodeIgniter\View\View->render('supplier/edit', Array, true)
+#3 C:\Users\USER-PC\Desktop\spk-saw\app\Controllers\Supplier.php(95): view('supplier/edit', Array)
+#4 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(918): App\Controllers\Supplier->edit('favicon.ico')
+#5 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+#6 C:\Users\USER-PC\Desktop\spk-saw\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\USER-PC\Desktop\spk-saw\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\USER-PC\Desktop\spk-saw\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\USER-P...')
+#9 {main}
