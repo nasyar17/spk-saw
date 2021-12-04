@@ -55,7 +55,8 @@ class Obat extends Controller
          'supplier' => $this->supplierModel->getSupplier(),
          'kriteria' => $this->kriteriaModel->getKriteria(),
          'variabel' => $this->variabelModel->getVariabel(),
-         'validation' => \Config\Services::validation()
+         'validation' => \Config\Services::validation(),
+         'session' => $this->session->get()
       ];
 
       return view('obat/tambah', $data);
@@ -130,13 +131,14 @@ class Obat extends Controller
    public function edit($obat_id)
    {
       $data = [
-         'title' => 'Ubah Obat',
+         'title' => 'Form Ubah Obat',
          'supplier' => $this->supplierModel->getSupplier(),
          'kriteria' => $this->kriteriaModel->getKriteria(),
          'variabel' => $this->variabelModel->getVariabel(),
          'nilai' => $this->nilaiModel->getNilaiByObatID($obat_id),
          'validation' => \Config\Services::validation(),
-         'obat' => $this->obatModel->getObat($obat_id)
+         'obat' => $this->obatModel->getObat($obat_id),
+         'session' => $this->session->get()
       ];
 
       return view('obat/edit', $data);

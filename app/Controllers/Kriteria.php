@@ -27,7 +27,8 @@ class Kriteria extends Controller
       $data = [
          'title' => 'Ubah Kriteria',
          'validation' => \Config\Services::validation(),
-         'kriteria' => $this->kriteriaModel->getKriteria($kriteria_id)
+         'kriteria' => $this->kriteriaModel->getKriteria($kriteria_id),
+         'session' => $this->session->get()
       ];
 
       return view('kriteria/edit', $data);

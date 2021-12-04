@@ -21,7 +21,7 @@
             </li>
 
             <?php
-            $datamaster = ['Obat', 'Supplier']
+            $datamaster = ['Obat', 'Supplier', 'Form Tambah Obat', 'Form Ubah Obat', 'Form Tambah Supplier', 'Form Ubah Supplier']
             ?>
             <li class="nav-item has-submenu">
                <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->

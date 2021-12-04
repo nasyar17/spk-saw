@@ -10,6 +10,18 @@
    border-color: #a83737
 }
 
+.app-btn-indigo {
+   background: #5f26b9;
+   color: #fff;
+   border-color: #5f26b9
+}
+
+.app-btn-indigo:hover {
+   color: #fff;
+   background: #481f8a;
+   border-color: #481f8a
+}
+
 .app-btn-warning {
    background: #f7b018;
    color: #000;

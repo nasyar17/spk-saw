@@ -41,7 +41,8 @@ class Supplier extends Controller
       $data = [
          'title' => 'Form Tambah Supplier',
          'supplier_id' => $this->generateIDSupplier(),
-         'validation' => \Config\Services::validation()
+         'validation' => \Config\Services::validation(),
+         'session' => $this->session->get()
       ];
       return view('supplier/tambah', $data);
    }
@@ -101,9 +102,10 @@ class Supplier extends Controller
    public function edit($supplier_id)
    {
       $data = [
-         'title' => 'Ubah Supplier',
+         'title' => 'Form Ubah Supplier',
          'validation' => \Config\Services::validation(),
-         'supplier' => $this->supplierModel->getSupplier($supplier_id)
+         'supplier' => $this->supplierModel->getSupplier($supplier_id),
+         'session' => $this->session->get()
       ];
 
       return view('supplier/edit', $data);
