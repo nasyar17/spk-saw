@@ -22,10 +22,15 @@ class ObatModel extends Model
    //    return $this->countAllResults();
    // }
 
-   public function getObatSupplier($obat_id)
+   public function getObatSupplier($obat_id = false)
    {
-      return $this->join('supplier', 'supplier.supplier_id = obat.supplier_id')
-         ->where(['obat_id' => $obat_id])
-         ->first();
+      if ($obat_id == false) {
+         return $this->join('supplier', 'supplier.supplier_id = obat.supplier_id')
+            ->findAll();
+      } else {
+         return $this->join('supplier', 'supplier.supplier_id = obat.supplier_id')
+            ->where(['obat_id' => $obat_id])
+            ->first();
+      }
    }
 }

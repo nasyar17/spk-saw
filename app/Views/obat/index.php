@@ -18,7 +18,7 @@
                      </button>
                   </div>
                   <div class="col-sm-12 col-md-4">
-                     <a href="obat/printLaporan" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Master Obat</a>
+                     <a href="/obat/print" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Master Obat</a>
                   </div>
                </div>
             </div>
@@ -47,7 +47,7 @@
                            <td class="text-center"><?= $i++;; ?></td>
                            <td class="text-center"><?= $r['obat_id']; ?></td>
                            <td class="text-left"><?= $r['obat_nama']; ?></td>
-                           <td class="text-center"><?= $r['supplier_id']; ?></td>
+                           <td class="text-center"><?= $r['supplier_nama']; ?></td>
                            <?php foreach ($nilai as $n) : ?>
                               <?php if ($n['obat_id'] == $r['obat_id']) : ?>
                                  <td class="text-center"><?= $n['variabel_nama']; ?></td>

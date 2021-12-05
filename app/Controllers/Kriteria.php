@@ -2,6 +2,7 @@
 
 use CodeIgniter\Controller;
 use App\Models\KriteriaModel;
+use App\Models\VariabelModel;
 
 class Kriteria extends Controller
 {
@@ -9,6 +10,7 @@ class Kriteria extends Controller
    public function __construct()
    {
       $this->kriteriaModel = new KriteriaModel();
+      $this->variabelModel = new VariabelModel();
       $this->session = session();
    }
 
@@ -87,5 +89,23 @@ class Kriteria extends Controller
       }
       session()->setFlashdata(['message' => 'Bobot berhasil diubah', 'icon' => 'success']);
       return redirect()->to('/kriteria/ubahBobot');
+   }
+
+   public function print()
+   {
+      $data = [
+         'title' => 'Laporan Data Kriteria',
+         'date' => date('d-F-Y H:i:s'),
+         'kriteria' => $this->kriteriaModel->getKriteria(),
+         'variabel' => $this->variabelModel->getVariabel(),
+         'session' => $this->session->get()
+      ];
+
+      $html = view('/kriteria/print', $data);
+      $dompdf = new \Dompdf\Dompdf();
+      $dompdf->loadHtml($html);
+      $dompdf->setPaper('A4', 'portrait');
+      $dompdf->render();
+      $dompdf->stream('kriteria-laporan-' . date('Y-m-d'));
    }
 }

@@ -10,7 +10,7 @@
             <h4 class="app-card-title">
                <div class="row">
                   <div class="col-lg-12">
-                     <a href="" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Variabel</a>
+                     <a href="/hitung/print_history" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Variabel</a>
                   </div>
                </div>
             </h4>

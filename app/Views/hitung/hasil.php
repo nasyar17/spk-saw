@@ -217,9 +217,17 @@
                </table>
             </div>
          </div>
+         <div class="app-card-footer p-3">
+            <div class="row">
+               <div class="col-lg-12">
+                  <a href="/hitung/kalkulasi/true" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Rekap Perhitungan</a>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
 </div>
 
+<?php session()->setFlashdata(['calculation' => 'false']); ?>
 
 <?= $this->endSection(); ?>

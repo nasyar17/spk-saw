@@ -14,7 +14,7 @@
                         <a href="/kriteria/ubahBobot" class="btn app-btn-primary w-100 py-3"><i class="fas fa-edit"></i> Ubah Bobot</a>
                      </div>
                      <div class="col-lg-6 col-sm-12">
-                        <a href="kriteria/printLaporan" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Kriteria</a>
+                        <a href="kriteria/print" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Kriteria</a>
                      </div>
                   </div>
                <?php endif; ?>

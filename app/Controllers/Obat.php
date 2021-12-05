@@ -25,7 +25,7 @@ class Obat extends Controller
       $data = [
          'title' => 'Obat',
          'kriteria' => $this->kriteriaModel->getKriteria(),
-         'obat' => $this->obatModel->getObat(),
+         'obat' => $this->obatModel->getObatSupplier(),
          'nilai' => $this->nilaiModel->getNilaiFull(),
          'session' => $this->session->get()
       ];
@@ -267,5 +267,26 @@ class Obat extends Controller
    public function downloadTemplate()
    {
       return $this->response->download(ROOTPATH . 'public\assets\excel\obat-templateExcel.xlsx', null);
+   }
+
+   public function print()
+   {
+      $data = [
+         'title' => 'Laporan Data Master Obat',
+         'date' => date('d-F-Y H:i:s'),
+         'kriteria' => $this->kriteriaModel->getKriteria(),
+         'obat' => $this->obatModel->getObatSupplier(),
+         'nilai' => $this->nilaiModel->getNilaiFull(),
+         'session' => $this->session->get()
+      ];
+
+      // return view('obat/print', $data);
+
+      $html = view('/obat/print', $data);
+      $dompdf = new \Dompdf\Dompdf();
+      $dompdf->loadHtml($html);
+      $dompdf->setPaper('A4', 'landscape');
+      $dompdf->render();
+      $dompdf->stream('obat-laporan-' . date('Y-m-d'));
    }
 }

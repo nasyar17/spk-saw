@@ -18,7 +18,7 @@
                      </button>
                   </div>
                   <div class="col-sm-12 col-md-4">
-                     <a href="supplier/printLaporan" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Master Supplier</a>
+                     <a href="/supplier/print" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Master Supplier</a>
                   </div>
                </div>
             </div>
@@ -32,7 +32,7 @@
                         <th>ID Supplier</th>
                         <th>Nama Supplier</th>
                         <th>Alamat</th>
-                        <th>Waktu Pengiriman</th>
+                        <th>Estimasi Waktu Pengiriman</th>
                         <?php if ($session['user_role'] == 'admin') : ?>
                            <th>Action</th>
                         <?php endif; ?>

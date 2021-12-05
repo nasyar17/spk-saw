@@ -26,7 +26,21 @@ class Hitung extends BaseController
 		return view('hitung/index', $data);
 	}
 
-	public function kalkulasi()
+	public function generateIDPerhitungan()
+	{
+		$jumlahData = count($this->historyModel->getHistory());
+		if ($jumlahData == 0) {
+			$jumlahData = 1;
+		}
+		$ID = 'P' . sprintf("%04d", $jumlahData);
+		while ($this->historyModel->getHistory($ID) >= 1) {
+			$jumlahData += 1;
+			$ID = 'P' . sprintf("%04d", $jumlahData);
+		}
+		return $ID;
+	}
+
+	public function kalkulasi($print = false)
 	{
 		$data = [
 			'title' => 'Hasil Perhitungan',
@@ -36,16 +50,6 @@ class Hitung extends BaseController
 		];
 
 		$dataLama = $data['nilai'];
-
-		// foreach ($dataLama as $dl) {
-		// 	foreach ($data['kriteria'] as $kr) {
-		// 		$arr[$dl['obat_id']]['obat_id'] = $dl['obat_id'];
-		// 		$arr[$dl['obat_id']]['obat_nama'] = $dl['obat_nama'];
-		// 		if ($dl['kriteria_id'] == $kr['kriteria_id']) {
-		// 			$arr[$dl['obat_id']][$kr['kriteria_id']] = $dl['variabel_nilai'];
-		// 		}
-		// 	}
-		// }
 
 		$i = 0;
 		foreach ($dataLama as $d) {
@@ -105,13 +109,28 @@ class Hitung extends BaseController
 			'minMax' => $minMax
 		];
 
-		// save hasil perhitungan
-		$this->historyModel->save([
-			'obat_id' => $data['obatTerpilih']['obat_id']
-		]);
-		session()->setFlashdata(['message' => 'Hasil perhitungan berhasil disimpan !', 'icon' => 'success']);
-
-		return view('hitung/hasil', $data);
+		if ($print == false) {
+			// save hasil perhitungan
+			if (session()->getFlashdata('calculation') == 'true') {
+				$this->historyModel->insert([
+					'history_id' => $this->generateIDPerhitungan(),
+					'obat_id' => $data['obatTerpilih']['obat_id']
+				]);
+				session()->setFlashdata(['message' => 'Hasil perhitungan berhasil disimpan !', 'icon' => 'success']);
+			}
+			return view('hitung/hasil', $data);
+		} else {
+			$data += [
+				'date' => date('d-F-Y H:i:s'),
+			];
+			// return view('hitung/print_hasil', $data);
+			$html = view('/hitung/print_hasil', $data);
+			$dompdf = new \Dompdf\Dompdf();
+			$dompdf->loadHtml($html);
+			$dompdf->setPaper('A4', 'portrait');
+			$dompdf->render();
+			$dompdf->stream('perhitungan-hasil-' . $data['history_id']);
+		}
 	}
 
 	public function history()
@@ -122,7 +141,30 @@ class Hitung extends BaseController
 			'session' => $this->session->get()
 		];
 
-		// dd($data);
 		return view('hitung/history', $data);
+	}
+
+	public function print_history()
+	{
+		$data = [
+			'title' => 'Cetak History Perhitungan',
+			'history' => $this->historyModel->getHistoryInfo(),
+			'date' => date('d-F-Y H:i:s'),
+			'session' => $this->session->get()
+		];
+
+		$html = view('/hitung/print', $data);
+		$dompdf = new \Dompdf\Dompdf();
+		$dompdf->loadHtml($html);
+		$dompdf->setPaper('A4', 'landscape');
+		$dompdf->render();
+		$dompdf->stream('perhitungan-laporan-' . date('Y-m-d'));
+	}
+
+	public function print_hasil()
+	{
+		$data = [
+			'title' => 'Cetak History Perhitungan',
+		];
 	}
 }

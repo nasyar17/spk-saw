@@ -195,4 +195,22 @@ class Supplier extends Controller
    {
       return $this->response->download(ROOTPATH . 'public\assets\excel\supplier-templateExcel.xlsx', null);
    }
+
+   public function print()
+   {
+      $data = [
+         'title' => 'Laporan Master Supplier',
+         'supplier' => $this->supplierModel->getSupplier(),
+         'date' => date('d-F-Y H:i:s'),
+         'session' => $this->session->get()
+      ];
+      // return view('supplier/print', $data);
+
+      $html = view('/supplier/print', $data);
+      $dompdf = new \Dompdf\Dompdf();
+      $dompdf->loadHtml($html);
+      $dompdf->setPaper('A4', 'portrait');
+      $dompdf->render();
+      $dompdf->stream('supplier-laporan-' . date('Y-m-d'));
+   }
 }

@@ -7,7 +7,7 @@ class HistoryModel extends Model
    protected $table = 'history';
    protected $primaryKey = 'history_id';
    protected $useTimestamps = true;
-   protected $allowedFields = ['obat_id', 'crud_desc'];
+   protected $allowedFields = ['history_id', 'obat_id',];
 
    public function getHistory($history_id = false)
    {
