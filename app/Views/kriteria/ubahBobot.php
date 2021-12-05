@@ -38,13 +38,13 @@
                      <?php foreach ($kriteria as $k) : ?>
                         <div class="item border-bottom py-3">
                            <div class="row justify-content-between align-items-center">
-                              <div class="col-9">
+                              <div class="col-8 col-lg-9">
                                  <div class="item-label"><strong><?= $k['kriteria_id']; ?></strong></div>
                                  <div class="item-data"><?= $k['kriteria_nama']; ?></div>
                               </div>
                               <!--//col-->
-                              <div class="col-2 text-end">
-                                 <input type="number" value="<?= (old($k['kriteria_bobot'])) ? old($k['kriteria_bobot']) : $k['kriteria_bobot'] ?>" class="form-control" name="<?= $k['kriteria_id']; ?>" required>
+                              <div class="col-3 col-lg-2 text-end">
+                                 <input type="number" value="<?= (old($k['kriteria_bobot'])) ? old($k['kriteria_bobot']) : $k['kriteria_bobot'] ?>" class="form-control" name="<?= $k['kriteria_id']; ?>" required <?= $session['user_role'] == 'owner' ? 'disabled' : '' ?>>
                               </div>
                               <div class="col-1">
                                  %

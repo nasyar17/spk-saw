@@ -6,9 +6,9 @@
 <div class="row">
    <div class="col-12">
       <div class="app-card">
-         <?php if ($session['user_role'] == 'admin') : ?>
-            <div class="app-card-header p-3">
-               <div class="row text-center">
+         <div class="app-card-header p-3">
+            <div class="row text-center">
+               <?php if ($session['user_role'] == 'admin') : ?>
                   <div class="col-sm-12 col-md-4 mb-2">
                      <a href="obat/tambah" class="btn app-btn-primary w-100 py-3"><i class=" fas fa-plus"></i> Tambah Data Obat</a>
                   </div>
@@ -20,9 +20,14 @@
                   <div class="col-sm-12 col-md-4">
                      <a href="/obat/print" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Master Obat</a>
                   </div>
-               </div>
+               <?php else : ?>
+                  <div class="col-12">
+                     <a href="/obat/print" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Master Obat</a>
+                  </div>
+               <?php endif; ?>
             </div>
-         <?php endif; ?>
+         </div>
+
          <div class="app-card-body p-3">
             <div class="table-responsive">
                <table class="table table-sm" id="obat">

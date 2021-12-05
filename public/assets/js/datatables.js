@@ -12,6 +12,18 @@ $('#supplier').dataTable({
 $('#history').dataTable({
    dom: 'lfrtip'
 });
+$('#matriks').dataTable({
+   dom: 'lfrtip'
+});
+$('#normalisasi').dataTable({
+   dom: 'lfrtip'
+});
+$('#rekap').dataTable({
+   dom: 'lfrtip',
+   "order": [
+      [6, "desc"]
+   ]
+});
 
 // page variabel
 $('#K01').dataTable({

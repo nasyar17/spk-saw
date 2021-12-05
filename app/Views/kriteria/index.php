@@ -8,16 +8,20 @@
       <div class="app-card">
          <div class="app-card-header p-3">
             <h4 class="app-card-title">
-               <?php if ($session['user_role'] == 'admin') : ?>
-                  <div class="row text-center">
+               <div class="row text-center">
+                  <?php if ($session['user_role'] == 'admin') : ?>
                      <div class="col-lg-6 col-sm-12 mb-2">
                         <a href="/kriteria/ubahBobot" class="btn app-btn-primary w-100 py-3"><i class="fas fa-edit"></i> Ubah Bobot</a>
                      </div>
                      <div class="col-lg-6 col-sm-12">
                         <a href="kriteria/print" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Kriteria</a>
                      </div>
-                  </div>
-               <?php endif; ?>
+                  <?php else : ?>
+                     <div class="col-12">
+                        <a href="kriteria/print" class="btn app-btn-indigo w-100 py-3"><i class=" fas fa-download"></i> Unduh Laporan Kriteria</a>
+                     </div>
+                  <?php endif; ?>
+               </div>
             </h4>
          </div>
          <div class="app-card-body p-3">

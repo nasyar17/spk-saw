@@ -67,9 +67,9 @@ class Hitung extends BaseController
 					$hasilKali[$d['nilai_id']]['obat_nama'] = $d['obat_nama'];
 					$hasilKali[$d['nilai_id']]['kriteria_id'] = $d['kriteria_id'];
 					if ($k['costbenefit'] == 'cost') {
-						$dataLama[$i]['variabel_nilai'] = $min / $d['variabel_nilai'];
+						$dataLama[$i]['variabel_nilai'] = number_format($min / $d['variabel_nilai'], 3);
 					} else {
-						$dataLama[$i]['variabel_nilai'] = $d['variabel_nilai'] / $max;
+						$dataLama[$i]['variabel_nilai'] = number_format($d['variabel_nilai'] / $max, 3);
 					}
 					// Dikalikan bobot
 					$hasilKali[$d['nilai_id']]['hasil'] = $dataLama[$i]['variabel_nilai'] * ($k['kriteria_bobot'] / 100);
@@ -82,13 +82,13 @@ class Hitung extends BaseController
 			$rekap[$h['obat_id']]['obat_id'] = $h['obat_id'];
 			if ($h['kriteria_id'] == 'K01') {
 				$rekap[$h['obat_id']]['obat_nama'] = $h['obat_nama'];
-				$rekap[$h['obat_id']]['K01'] = $h['hasil'];
+				$rekap[$h['obat_id']]['K01'] = number_format($h['hasil'], 3);
 			} elseif ($h['kriteria_id'] == 'K02') {
-				$rekap[$h['obat_id']]['K02'] = $h['hasil'];
+				$rekap[$h['obat_id']]['K02'] = number_format($h['hasil'], 3);
 			} elseif ($h['kriteria_id'] == 'K03') {
-				$rekap[$h['obat_id']]['K03'] = $h['hasil'];
+				$rekap[$h['obat_id']]['K03'] = number_format($h['hasil'], 3);
 			} elseif ($h['kriteria_id'] == 'K04') {
-				$rekap[$h['obat_id']]['K04'] = $h['hasil'];
+				$rekap[$h['obat_id']]['K04'] = number_format($h['hasil'], 3);
 			}
 		}
 
@@ -109,27 +109,32 @@ class Hitung extends BaseController
 			'minMax' => $minMax
 		];
 
+		$history_id = $this->generateIDPerhitungan();
 		if ($print == false) {
 			// save hasil perhitungan
 			if (session()->getFlashdata('calculation') == 'true') {
 				$this->historyModel->insert([
-					'history_id' => $this->generateIDPerhitungan(),
+					'history_id' => $history_id,
 					'obat_id' => $data['obatTerpilih']['obat_id']
 				]);
 				session()->setFlashdata(['message' => 'Hasil perhitungan berhasil disimpan !', 'icon' => 'success']);
 			}
 			return view('hitung/hasil', $data);
 		} else {
-			$data += [
+			$data = [
+				'history_id' => $history_id,
 				'date' => date('d-F-Y H:i:s'),
+				'kriteria' => $this->kriteriaModel->getKriteria(),
+				'rekap' => $rekap,
+				'obatTerpilih' => $this->obatModel->getObatSupplier($rekap[0]['obat_id']),
 			];
-			// return view('hitung/print_hasil', $data);
-			$html = view('/hitung/print_hasil', $data);
+
+			$html = view('hitung/print_hasil', $data);
 			$dompdf = new \Dompdf\Dompdf();
 			$dompdf->loadHtml($html);
 			$dompdf->setPaper('A4', 'portrait');
 			$dompdf->render();
-			$dompdf->stream('perhitungan-hasil-' . $data['history_id']);
+			$dompdf->stream('perhitungan-hasil-' . $history_id);
 		}
 	}
 

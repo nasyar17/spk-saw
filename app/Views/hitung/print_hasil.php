@@ -7,7 +7,6 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
    <link rel="shortcut icon" href="favicon.ico">
 
@@ -16,7 +15,7 @@
       table,
       th,
       td {
-         padding: 2px 5px;
+         padding: 3px 15px;
          border: 1px solid black;
          border-collapse: collapse;
       }
@@ -34,9 +33,10 @@
 
 <body>
    <h2 class="center">REKAP PERHITUNGAN</h2>
+   <p class="bold">ID Perhitungan : <?= $history_id; ?></p>
    <p class="bold">Dicetak : <?= $date; ?></p>
 
-   <h3>NILAI MATRIKS KEPUTUSAN</h3>
+   <h4 class="center">10 DATA TERBESAR NILAI MATRIKS KEPUTUSAN</h4>
    <table>
       <thead>
          <tr class="center">
@@ -62,6 +62,11 @@
                <td class="center"><?= $r['K04']; ?></td>
                <td class="center"><?= $r['hasilAkhir']; ?></td>
             </tr>
+            <?php
+            if ($i >= 11) {
+               break;
+            }
+            ?>
          <?php endforeach; ?>
       </tbody>
    </table>
@@ -69,8 +74,8 @@
    <br>
    <hr>
 
-   <h4>Maka yang paling layak dilakukan restock adalah barang dengan : : </h4>
-   <table class="table">
+   <h4>Maka yang paling layak dilakukan restock adalah barang dengan :</h4>
+   <table>
       <tbody>
          <tr>
             <td>ID</td>

@@ -23,8 +23,8 @@
                      <?php foreach ($minMax as $r) : ?>
                         <tr>
                            <td><b><?= $r['kriteria_id'];  ?></b> | <?= $r['kriteria_nama']; ?></td>
-                           <td><?= $r['min'];  ?></td>
-                           <td><?= $r['max'];  ?></td>
+                           <td class="text-center"><?= $r['min'];  ?></td>
+                           <td class="text-center"><?= $r['max'];  ?></td>
                         </tr>
                      <?php endforeach; ?>
                   </tbody>
@@ -44,6 +44,7 @@
                   <thead>
                      <tr class="text-center">
                         <th>Nama Kriteria</th>
+                        <th></th>
                         <th>Bobot</th>
                      </tr>
                   </thead>
@@ -51,7 +52,8 @@
                      <?php foreach ($kriteria as $r) : ?>
                         <tr>
                            <td><b><?= $r['kriteria_id']; ?></b> | <?= $r['kriteria_nama']; ?></td>
-                           <td><?= $r['kriteria_bobot']; ?> % (<?= $r['kriteria_bobot'] / 100; ?>)</td>
+                           <td><span class="badge rounded-pill <?= $r['costbenefit'] == 'cost' ? 'bg-danger' : 'bg-success'; ?>"><?= $r['costbenefit']; ?></span></td>
+                           <td class="text-center"><?= $r['kriteria_bobot']; ?> % (<?= $r['kriteria_bobot'] / 100; ?>)</td>
                         </tr>
                      <?php endforeach; ?>
                   </tbody>
@@ -69,13 +71,13 @@
          </div>
          <div class="app-card-body p-3">
             <div class="table-responsive">
-               <table class="table">
+               <table class="table" id="matriks">
                   <thead>
-                     <tr class="text-center">
+                     <tr class="text-center align-middle">
                         <th>Obat ID</th>
                         <th>Nama Obat</th>
                         <?php foreach ($kriteria as $r) : ?>
-                           <th><?= $r['kriteria_id']; ?> (<?= $r['costbenefit']; ?>)</th>
+                           <th><?= $r['kriteria_id']; ?> <br> <span class="badge rounded-pill <?= $r['costbenefit'] == 'cost' ? 'bg-danger' : 'bg-success'; ?>"><?= $r['costbenefit']; ?></span></th>
                         <?php endforeach; ?>
                      </tr>
                   </thead>
@@ -83,12 +85,12 @@
                      <?php $old = ''; ?>
                      <?php foreach ($nilai as $r) : ?>
                         <?php if ($old == $r['obat_id']) : ?>
-                           <td><?= $r['variabel_nilai']; ?></td>
+                           <td class="text-center"><?= $r['variabel_nilai']; ?></td>
                         <?php else : ?>
                            <tr>
-                              <td><?= $r['obat_id']; ?></td>
+                              <td class="text-center"><?= $r['obat_id']; ?></td>
                               <td><?= $r['obat_nama']; ?></td>
-                              <td><?= $r['variabel_nilai']; ?></td>
+                              <td class="text-center"><?= $r['variabel_nilai']; ?></td>
                            <?php endif; ?>
                            <?php $old = $r['obat_id'] ?>
                         <?php endforeach; ?>
@@ -104,13 +106,15 @@
          </div>
          <div class="app-card-body p-3">
             <div class="table-responsive">
-               <table class="table">
+               <table class="table" id="normalisasi">
                   <thead>
-                     <tr class="text-center">
+                     <tr class="text-center align-middle">
                         <th>Obat ID</th>
                         <th>Nama Obat</th>
                         <?php foreach ($kriteria as $r) : ?>
-                           <th><?= $r['kriteria_id']; ?> (<?= $r['kriteria_bobot']; ?> %)</th>
+                           <th>
+                              <?= $r['kriteria_id']; ?> (<?= $r['kriteria_bobot']; ?> %) <br> <span class="badge rounded-pill <?= $r['costbenefit'] == 'cost' ? 'bg-danger' : 'bg-success'; ?>"><?= $r['costbenefit']; ?></span>
+                           </th>
                         <?php endforeach; ?>
                      </tr>
                   </thead>
@@ -118,12 +122,12 @@
                      <?php $old = ''; ?>
                      <?php foreach ($normalisasi as $r) : ?>
                         <?php if ($old == $r['obat_id']) : ?>
-                           <td><?= $r['variabel_nilai']; ?></td>
+                           <td class="text-center"><?= $r['variabel_nilai']; ?></td>
                         <?php else : ?>
                            <tr>
-                              <td><?= $r['obat_id']; ?></td>
+                              <td class="text-center"><?= $r['obat_id']; ?></td>
                               <td><?= $r['obat_nama']; ?></td>
-                              <td><?= $r['variabel_nilai']; ?></td>
+                              <td class="text-center"><?= $r['variabel_nilai']; ?></td>
                            <?php endif; ?>
                            <?php $old = $r['obat_id'] ?>
                         <?php endforeach; ?>
@@ -139,17 +143,19 @@
    <div class="col-12">
       <div class="app-card mt-3">
          <div class="app-card-header p-3 bg-primary">
-            <h4 class="app-card-title text-white">Nilai Matriks Keputusan</h4>
+            <h4 class="app-card-title text-white">Rekap Hasil Akhir</h4>
          </div>
          <div class="app-card-body p-3">
             <div class="table-responsive">
-               <table class="table">
+               <table class="table" id="rekap">
                   <thead>
-                     <tr class="text-center">
+                     <tr class="text-center align-middle">
                         <th>Obat ID</th>
                         <th>Nama Obat</th>
                         <?php foreach ($kriteria as $r) : ?>
-                           <th><?= $r['kriteria_id']; ?></th>
+                           <th>
+                              <?= $r['kriteria_id']; ?> (<?= $r['kriteria_bobot']; ?> %) <br> <span class="badge rounded-pill <?= $r['costbenefit'] == 'cost' ? 'bg-danger' : 'bg-success'; ?>"><?= $r['costbenefit']; ?></span>
+                           </th>
                         <?php endforeach; ?>
                         <th>Hasil Akhir</th>
                      </tr>
@@ -158,17 +164,17 @@
                      <?php $i = 0; ?>
                      <?php foreach ($rekap as $r) : ?>
                         <tr>
-                           <td><?= $r['obat_id']; ?></td>
+                           <td class="text-center"><?= $r['obat_id']; ?></td>
                            <td><?= $r['obat_nama']; ?></td>
-                           <td><?= $r['K01']; ?></td>
-                           <td><?= $r['K02']; ?></td>
-                           <td><?= $r['K03']; ?></td>
-                           <td><?= $r['K04']; ?></td>
-                           <td>
+                           <td class="text-center"><?= $r['K01']; ?></td>
+                           <td class="text-center"><?= $r['K02']; ?></td>
+                           <td class="text-center"><?= $r['K03']; ?></td>
+                           <td class="text-center"><?= $r['K04']; ?></td>
+                           <td class="text-center">
                               <?php if ($i == 0) : ?>
-                                 <span class="badge rounded-pill bg-success"><?= $r['hasilAkhir']; ?></span>
+                                 <span class="badge bg-success"><?= $r['hasilAkhir']; ?></span>
                               <?php else : ?>
-                                 <span class="badge rounded-pill bg-secondary"><?= $r['hasilAkhir']; ?></span>
+                                 <span class="badge bg-secondary"><?= $r['hasilAkhir']; ?></span>
                               <?php endif; ?>
                            </td>
                         </tr>
